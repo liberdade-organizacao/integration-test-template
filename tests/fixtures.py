@@ -1,8 +1,10 @@
+from os import environ
+
 import pytest
 
 
 @pytest.fixture()
-def resource(request):
+def environment(request):
     # setup
-    yield "resource"
+    yield environ
     # teardown
